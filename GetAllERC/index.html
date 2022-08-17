@@ -26,7 +26,7 @@
         // Display the ERC20 Token Balances of an address
         getBalances = async () => {
 
-            const options = { chain: 'eth', address: "0x9599947c2892d315D8eDfb47cd6108d2284f502c" }
+            const options = { chain: 'eth', address: "0x9599947c2892d315D8eDfb47cd6108d2284f502c" } //change address to get all ERC tokens
             const balances = await Moralis.Web3.getAllERC20(options);
 
             console.log(balances);
@@ -38,7 +38,7 @@
         getNFTBalances = async () => {
             // get NFTs for current user on Mainnet
 
-            const options = { chain: 'eth', address: '0x49e74e31787734c3543e99bfacd457cb8286b239' };
+            const options = { chain: 'eth', address: '0x49e74e31787734c3543e99bfacd457cb8286b239' }; //change address to get all NFTs
             const userEthNFTs = await Moralis.Web3.getNFTs(options);
             console.log(userEthNFTs);
         }
